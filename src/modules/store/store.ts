@@ -7,11 +7,11 @@ import {
   configureStore,
 } from "@reduxjs/toolkit";
 import { Dependencies } from "./dependencies";
+import { AppState } from "./app-state";
 
 const reducers = combineReducers({});
 
 export type AppStore = ReturnType<typeof createStore>;
-export type AppState = ReturnType<typeof reducers>;
 export type AppDispatch = ThunkDispatch<AppState, Dependencies, UnknownAction>;
 export type AppGetState = AppStore["getState"];
 export type ThunkApi = {

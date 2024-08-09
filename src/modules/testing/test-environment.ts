@@ -1,4 +1,4 @@
-import { AppState } from "react-native";
+import { AppState } from "../store/app-state";
 import { Dependencies } from "../store/dependencies";
 import { createStore } from "../store/store";
 
