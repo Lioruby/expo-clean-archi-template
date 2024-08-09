@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { Text, View } from "react-native";
 
 export default function HomeScreen() {
+  const { t } = useTranslation();
   return (
     <View
       style={{
@@ -9,7 +11,7 @@ export default function HomeScreen() {
         alignItems: "center",
       }}
     >
-      <Text>Welcome to the Expo Clean Archi Template ! Happy coding 😌</Text>
+      <Text>{t("title")}</Text>
     </View>
   );
 }
