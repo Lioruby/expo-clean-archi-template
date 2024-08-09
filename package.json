@@ -11,7 +11,7 @@
     "lint": "expo lint",
     "typeCheck": "tsc --noEmit",
     "pretty": "pretty-quick --staged",
-    "prepare": "husky install",
+    "prepare": "husky",
     "hook:precommit": "yarn typeCheck && yarn lint && yarn pretty",
     "hook:prepush": "yarn jest"
   },
