@@ -1,6 +1,6 @@
 import { InMemoryAnalyticsGateway } from "../analytics/gateways-impl/in-memory.analytics-gateway";
 import { StubDeviceLocaleProvider } from "../global/providers-impl/device-locale/stub-device-local.provider";
-import { InMemoryStorageProvider } from "../global/providers-impl/storage/stub-storage.provider";
+import { InMemoryStorageProvider } from "../global/providers-impl/storage/in-memory-storage.provider";
 import { AppState } from "../store/app-state";
 import { Dependencies } from "../store/dependencies";
 import { createStore } from "../store/store";
