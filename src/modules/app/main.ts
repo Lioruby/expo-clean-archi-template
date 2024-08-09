@@ -3,7 +3,7 @@ import { Dependencies } from "../store/dependencies";
 import { AppStore, createStore } from "../store/store";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { languageDetector } from "../shared/react-native/utils/language-detector";
+import { languageDetector } from "../shared/react-native/utils/language-detector.utils";
 import "intl-pluralrules";
 
 export class App {
