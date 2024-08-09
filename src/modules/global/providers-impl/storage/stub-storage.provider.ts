@@ -1,4 +1,4 @@
-import { IStorageProvider } from "../../providers/storage.provider";
+import { IStorageProvider } from "../../core/providers/storage.provider";
 
 export class InMemoryStorageProvider implements IStorageProvider {
   private storage: Record<string, unknown> = {};

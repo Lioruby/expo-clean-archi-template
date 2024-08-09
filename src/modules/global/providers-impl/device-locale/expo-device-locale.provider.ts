@@ -1,5 +1,5 @@
 import { getLocales } from "expo-localization";
-import { IDeviceLocaleProvider } from "../../providers/device-locale.provider";
+import { IDeviceLocaleProvider } from "../../core/providers/device-locale.provider";
 
 export class ExpoDeviceLocaleProvider implements IDeviceLocaleProvider {
   getLocale(): string {

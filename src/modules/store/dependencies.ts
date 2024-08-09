@@ -1,6 +1,6 @@
-import { IAnalyticsGateway } from "../analytics/gateways/analytics-gateway";
-import { IDeviceLocaleProvider } from "../core/providers/device-locale.provider";
-import { IStorageProvider } from "../core/providers/storage.provider";
+import { IAnalyticsGateway } from "../analytics/core/gateways/analytics-gateway";
+import { IDeviceLocaleProvider } from "../global/core/providers/device-locale.provider";
+import { IStorageProvider } from "../global/core/providers/storage.provider";
 
 export type Dependencies = {
   /* Providers */

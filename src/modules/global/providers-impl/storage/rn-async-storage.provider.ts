@@ -1,4 +1,4 @@
-import { IStorageProvider } from "../../providers/storage.provider";
+import { IStorageProvider } from "../../core/providers/storage.provider";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export class RNAsyncStorageProvider implements IStorageProvider {
