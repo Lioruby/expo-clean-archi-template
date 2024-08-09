@@ -9,7 +9,7 @@ export default function HomeScreen() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Welcome to the Expo Clean Archi Template ! Happy coding 😌</Text>
     </View>
   );
 }
