@@ -5,6 +5,7 @@ import i18n, { LanguageDetectorModule } from "i18next";
 import { initReactI18next } from "react-i18next";
 import "intl-pluralrules";
 import { ExpoDeviceLocaleProvider } from "../core/expo-device-locale.provider";
+import { InMemoryAnalyticsGateway } from "../analytics/gateways-impl/in-memory.analytics-gateway";
 
 export class App {
   public dependencies: Dependencies;
@@ -19,6 +20,7 @@ export class App {
   setupDependencies(): Dependencies {
     return {
       deviceLocaleProvider: new ExpoDeviceLocaleProvider(),
+      analyticsGateway: new InMemoryAnalyticsGateway(),
     };
   }
 
