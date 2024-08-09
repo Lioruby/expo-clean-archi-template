@@ -1,5 +1,6 @@
 import { InMemoryAnalyticsGateway } from "../analytics/gateways-impl/in-memory.analytics-gateway";
-import { StubDeviceLocaleProvider } from "../core/stub-device-local.provider";
+import { StubDeviceLocaleProvider } from "../core/providers-impl/device-locale/stub-device-local.provider";
+import { InMemoryStorageProvider } from "../core/providers-impl/storage/stub-storage.provider";
 import { AppState } from "../store/app-state";
 import { Dependencies } from "../store/dependencies";
 import { createStore } from "../store/store";
@@ -13,6 +14,7 @@ const createDependencies = (
   dependencies?: Partial<Dependencies>,
 ): Dependencies => ({
   deviceLocaleProvider: new StubDeviceLocaleProvider(),
+  storageProvider: new InMemoryStorageProvider(),
   analyticsGateway: new InMemoryAnalyticsGateway(),
   ...dependencies,
 });

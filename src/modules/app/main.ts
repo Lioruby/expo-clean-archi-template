@@ -4,8 +4,9 @@ import { AppStore, createStore } from "../store/store";
 import i18n, { LanguageDetectorModule } from "i18next";
 import { initReactI18next } from "react-i18next";
 import "intl-pluralrules";
-import { ExpoDeviceLocaleProvider } from "../core/expo-device-locale.provider";
+import { ExpoDeviceLocaleProvider } from "../core/providers-impl/device-locale/expo-device-locale.provider";
 import { InMemoryAnalyticsGateway } from "../analytics/gateways-impl/in-memory.analytics-gateway";
+import { RNAsyncStorageProvider } from "../core/providers-impl/storage/rn-async-storage.provider";
 
 export class App {
   public dependencies: Dependencies;
@@ -20,6 +21,7 @@ export class App {
   setupDependencies(): Dependencies {
     return {
       deviceLocaleProvider: new ExpoDeviceLocaleProvider(),
+      storageProvider: new RNAsyncStorageProvider(),
       analyticsGateway: new InMemoryAnalyticsGateway(),
     };
   }

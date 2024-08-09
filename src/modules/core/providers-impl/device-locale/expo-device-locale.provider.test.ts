@@ -12,6 +12,11 @@ describe("ExpoDeviceLocaleProvider", () => {
     ]);
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+    jest.useRealTimers();
+  });
+
   it("should return the locale from the device", () => {
     const provider = new ExpoDeviceLocaleProvider();
     const locale = provider.getLocale();
