@@ -1,3 +1,4 @@
+import { StubDeviceLocaleProvider } from "../core/stub-device-local.provider";
 import { AppState } from "../store/app-state";
 import { Dependencies } from "../store/dependencies";
 import { createStore } from "../store/store";
@@ -8,8 +9,9 @@ import { createStore } from "../store/store";
  * @returns
  */
 const createDependencies = (
-  dependencies?: Partial<Dependencies>
+  dependencies?: Partial<Dependencies>,
 ): Dependencies => ({
+  deviceLocaleProvider: new StubDeviceLocaleProvider(),
   ...dependencies,
 });
 
