@@ -1,4 +1,4 @@
-import { InMemoryAnalyticsGateway } from "./in-memory.analytics-gateway";
+import { InMemoryAnalyticsGateway } from "./in-memory-analytics.gateway";
 
 describe("In memory analytics gateway", () => {
   it("Should be defined", () => {

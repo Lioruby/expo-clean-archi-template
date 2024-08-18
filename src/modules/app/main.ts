@@ -5,8 +5,8 @@ import i18n, { LanguageDetectorModule } from "i18next";
 import { initReactI18next } from "react-i18next";
 import "intl-pluralrules";
 import { ExpoDeviceLocaleProvider } from "../global/providers-impl/device-locale/expo-device-locale.provider";
-import { InMemoryAnalyticsGateway } from "../analytics/gateways-impl/in-memory.analytics-gateway";
 import { RNAsyncStorageProvider } from "../global/providers-impl/storage/rn-async-storage.provider";
+import { InMemoryAnalyticsGateway } from "../global/gateways-impl/in-memory-analytics.gateway";
 
 export class App {
   public dependencies: Dependencies;

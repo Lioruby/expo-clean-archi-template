@@ -1,5 +1,5 @@
 import * as amplitude from "@amplitude/analytics-react-native";
-import { IAnalyticsGateway } from "../core/gateways/analytics-gateway";
+import { IAnalyticsGateway } from "../core/gateways/analytics.gateway";
 
 export class AmplitudeAnalyticsGateway implements IAnalyticsGateway {
   constructor() {

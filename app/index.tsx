@@ -1,4 +1,4 @@
-import HomeScreen from "@/src/modules/pages/react/home-screen/HomeScreen";
+import HomeScreen from "@/src/modules/global/react/HomeScreen";
 
 export default function Index() {
   return <HomeScreen />;

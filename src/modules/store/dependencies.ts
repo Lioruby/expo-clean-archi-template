@@ -1,4 +1,4 @@
-import { IAnalyticsGateway } from "../analytics/core/gateways/analytics-gateway";
+import { IAnalyticsGateway } from "../global/core/gateways/analytics.gateway";
 import { IDeviceLocaleProvider } from "../global/core/providers/device-locale.provider";
 import { IStorageProvider } from "../global/core/providers/storage.provider";
 

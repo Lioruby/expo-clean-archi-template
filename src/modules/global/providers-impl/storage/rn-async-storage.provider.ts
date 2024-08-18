@@ -6,8 +6,9 @@ export class RNAsyncStorageProvider implements IStorageProvider {
     await AsyncStorage.setItem(key, value);
   }
 
-  async get(key: string): Promise<string | null> {
-    return await AsyncStorage.getItem(key);
+  async get(key: string): Promise<Record<string, unknown> | null> {
+    const item = await AsyncStorage.getItem(key);
+    return item ? JSON.parse(item) : null;
   }
 
   async remove(key: string): Promise<void> {

@@ -7,8 +7,8 @@ export class InMemoryStorageProvider implements IStorageProvider {
     this.storage[key] = value;
   }
 
-  async get(key: string): Promise<string | null> {
-    return this.storage[key] as string | null;
+  async get(key: string): Promise<Record<string, unknown> | null> {
+    return this.storage[key] as Record<string, unknown> | null;
   }
 
   async remove(key: string): Promise<void> {
