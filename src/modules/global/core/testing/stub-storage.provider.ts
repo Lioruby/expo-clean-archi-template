@@ -1,15 +1,14 @@
 import { IStorageProvider } from "../providers/storage.provider";
 
 export class StubStorageProvider implements IStorageProvider {
-  private storage: Record<string, unknown> = {};
+  private storage: Record<string, string> = {};
 
   async save(key: string, value: string): Promise<void> {
-    const valueParsed = JSON.parse(value as string);
-    this.storage[key] = valueParsed;
+    this.storage[key] = value;
   }
 
-  async get(key: string): Promise<Record<string, unknown> | null> {
-    return this.storage[key] as Record<string, unknown> | null;
+  async get(key: string): Promise<string | null> {
+    return this.storage[key] || null;
   }
 
   async remove(key: string): Promise<void> {

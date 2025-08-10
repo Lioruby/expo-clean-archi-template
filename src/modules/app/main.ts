@@ -27,6 +27,7 @@ export class App {
   }
 
   setupI18n() {
+    // eslint-disable-next-line import/no-named-as-default-member
     i18n
       .use(this._languageDetector())
       .use(initReactI18next)
@@ -34,7 +35,7 @@ export class App {
         lng: "en",
         fallbackLng: "en",
         supportedLngs: ["en", "fr"],
-        compatibilityJSON: "v3",
+        compatibilityJSON: "v4",
         resources,
       });
   }
