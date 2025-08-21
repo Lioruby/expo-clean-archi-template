@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
+import AppStack from "../../navigation/AppStack";
+import { StatusBar } from "react-native";
 
-export const AppLayout: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
-  return <Fragment>{children}</Fragment>;
+export const AppLayout: React.FC = () => {
+  return (
+    <Fragment>
+      <StatusBar barStyle="dark-content" />
+      <AppStack />
+    </Fragment>
+  );
 };

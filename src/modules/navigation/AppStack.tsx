@@ -1,9 +1,10 @@
-import { Stack } from "expo-router";
+import HomeScreen from "../global/react/HomeScreen";
+import { Stack } from "./Stack";
 
 export default function AppStack() {
   return (
-    <Stack>
-      <Stack.Screen name="index" />
-    </Stack>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={HomeScreen} />
+    </Stack.Navigator>
   );
 }
