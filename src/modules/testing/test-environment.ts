@@ -1,6 +1,5 @@
 import { StubDeviceLocaleProvider } from "../global/core/testing/stub-device-local.provider";
 import { StubStorageProvider } from "../global/core/testing/stub-storage.provider";
-import { InMemoryAnalyticsGateway } from "../global/gateways-impl/in-memory-analytics.gateway";
 import { AppState } from "../store/app-state";
 import { Dependencies } from "../store/dependencies";
 import { createStore } from "../store/store";
@@ -15,7 +14,6 @@ const createDependencies = (
 ): Dependencies => ({
   deviceLocaleProvider: new StubDeviceLocaleProvider(),
   storageProvider: new StubStorageProvider(),
-  analyticsGateway: new InMemoryAnalyticsGateway(),
   ...dependencies,
 });
 
